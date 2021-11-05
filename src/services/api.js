@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://app.setconstrucaovirtual.com.br/api/',
+  baseURL: `https://superheroapi.com/api/access-token`,
 });
 
 api.interceptors.request.use((error) => {
