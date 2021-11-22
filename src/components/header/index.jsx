@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const Header = (props) => {
-  const [openMenu, setOpenMenu] = useState(false);
-
   return (
     <div className="fixed top-0 left-0 right-0 flex-1 flex flex-col">
       <nav className="px-4 flex justify-between bg-white h-16 border-b-2">
@@ -18,7 +16,7 @@ export const Header = (props) => {
         </ul>
         <ul className="flex items-center">
           <li>
-            <h1 className="pl-8 lg:pl-0 text-gray-700">Svelte</h1>
+            <h1 className="pl-8 lg:pl-0 text-gray-700">{props.title}</h1>
           </li>
         </ul>
         <ul className="flex items-center">
