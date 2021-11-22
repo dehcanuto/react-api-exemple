@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const AcessToken = '3912102678893375';
+
 const api = axios.create({
-  baseURL: `https://superheroapi.com/api/access-token`,
+  baseURL: `https://superheroapi.com/api/${AcessToken}`,
 });
 
 api.interceptors.request.use((error) => {
