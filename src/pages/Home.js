@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Header } from '../components/header';
 import { Card } from '../components/card';
 
-import { listHeros } from '../lib/hero';
+// import { listHeros } from '../lib/hero';
 
 export default function HomePage() {
   const [heroes, setHeroes] = useState([]);
