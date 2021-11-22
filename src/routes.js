@@ -2,13 +2,12 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // Pages
-// import HomePage from './pages/Home';
+import HomePage from './pages/Home';
 
 const Routes = () => (
   <BrowserRouter basename="/">
     <Switch>
-      {/* <Route exact path="/" component={HomePage} /> */}
-      <Route exact path="/" component={() => <h1>Pagina inicial</h1>} />
+      <Route exact path="/" component={HomePage} />
     </Switch>
   </BrowserRouter>
 );
