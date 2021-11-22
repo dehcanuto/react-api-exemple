@@ -5,7 +5,7 @@ export const Header = (props) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className="flex-1 flex flex-col">
+    <div className="fixed top-0 left-0 right-0 flex-1 flex flex-col">
       <nav className="px-4 flex justify-between bg-white h-16 border-b-2">
         <ul className="flex items-center">
           <li className="h-6 w-6">
@@ -42,8 +42,8 @@ export const Header = (props) => {
           <li className="h-10 w-10">
             <img
               className="h-full w-full rounded-full mx-auto"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-              alt="profile woman"
+              src="https://randomuser.me/api/portraits/women/1.jpg"
+              alt="Foto do usuário"
             />
           </li>
         </ul>
