@@ -9,13 +9,13 @@ export default function HomePage() {
   const [heroes, setHeroes] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  async function init() {
-    setHeroes(await listHeros());
-    setLoading(false);
-    console.log('heroes', heroes);
-  }
-
   useEffect(() => {
+    async function init() {
+      console.log('foi');
+      setHeroes(await listHeros());
+      setLoading(false);
+      console.log('heroes', heroes);
+    }
     init();
   }, []);
 

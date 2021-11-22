@@ -1,7 +1,7 @@
 import api from '../services/api';
 
 export async function listHeros() {
-  const response = await api.get();
+  const response = await api.get('1');
   if (response.status !== 200) throw new Error('Erro ao exibir projetos');
   return response.data.objects;
 }
