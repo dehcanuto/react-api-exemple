@@ -15,7 +15,7 @@ export async function listHeros() {
     return response.json();
   });
 
-  console.log('response', response.data.results);
+  console.log('response', response.data);
   if (response.code !== 200) throw new Error('Erro ao exibir herois');
   return response.data;
 

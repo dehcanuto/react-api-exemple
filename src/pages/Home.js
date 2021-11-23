@@ -13,7 +13,6 @@ export default function HomePage() {
     async function init() {
       setHeroes(await listHeros());
       setLoading(false);
-      console.log('heroes', heroes);
     }
     init();
   }, []);
