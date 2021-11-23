@@ -9,12 +9,12 @@ export const Card = (props) => {
           <div className="flex justify-between items-center py-4">
             <img
               className="w-12 rounded-full"
-              src="https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_0.jpg"
-              alt="Alex"
+              src={`${props.data.thumbnail.path}`}
+              alt={props.data.name}
             />
             <div className="ml-3">
               <h1 className="text-xl font-bold text-gray-800 cursor-pointer">
-                Stuar Manson
+                {props.data.name}
               </h1>
               <p className="text-sm text-gray-800 hover:underline cursor-pointer">
                 #Publicado hace 2 horas

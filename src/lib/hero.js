@@ -9,19 +9,17 @@ export async function listHeros() {
 
   hash.update(timestamp + PRIVATE_KEY + PUBLIC_KEY);
 
-  // const response = await fetch(
-  //   `https://gateway.marvel.com/v1/public/characters?ts=${timestamp}&orderBy=name&limit=10&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`
-  // );
-  // const responseJson = await response.json();
-  // console.log('response', response);
-  // console.log('responseJson', responseJson);
+  const response = await fetch(
+    `https://gateway.marvel.com/v1/public/characters?ts=${timestamp}&orderBy=name&limit=10&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`
+  ).then(function (response) {
+    return response.json();
+  });
 
-  return hash;
+  console.log('response', response.data.results);
+  if (response.code !== 200) throw new Error('Erro ao exibir herois');
+  return response.data;
 
   // const response = await api.get(`/characters`);
-  // console.log('response', response);
-  // if (response.code !== 200) throw new Error('Erro ao exibir herois');
-  // return response.data;
 }
 
 // export async function getHero(id) {
