@@ -20,13 +20,17 @@ export default function HomePage() {
   return (
     <div className="min-w-screen min-h-screen bg-gray-200 flex items-center justify-center px-5 py-5">
       <Header title="Home" />
-      {!loading ? (
-        heroes.results.map((item) => {
-          return <Card data={item} />;
-        })
-      ) : (
-        <p>Loading...</p>
-      )}
+      <div className="max-w-5xl mx-auto mt-16">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-8">
+          {!loading ? (
+            heroes.results.map((item) => {
+              return <Card data={item} />;
+            })
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
