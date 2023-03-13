@@ -23,8 +23,8 @@ export default function HomePage() {
       <div className="max-w-5xl mx-auto mt-16">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-8">
           {!loading ? (
-            heroes.results.map((item) => {
-              return <Card data={item} />;
+            heroes.results.map((item, index) => {
+              return <Card data={item} key={index} />;
             })
           ) : (
             <p>Loading...</p>
